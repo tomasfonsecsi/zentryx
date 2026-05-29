@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useAccount } from "wagmi";
-import { Card, ChainSelector, TransactionProgress, SuccessModal } from "@/components";
+import { Card, ChainSelector, TransactionProgress, SuccessModal, RecoveryCard } from "@/components";
 import { useBridge, useHydration } from "@/hooks";
 import { useBridgeStore } from "@/store";
 import { CCTP_FAST_ESTIMATE_SECONDS } from "@/lib/config";
@@ -64,7 +64,8 @@ export default function BridgePage() {
 
   // Bridge form
   return (
-    <Card elevated>
+    <>
+      <Card elevated>
       <div className="mb-8">
         <h2 className="text-[21px] font-semibold tracking-[-0.02em] text-txt-1">Bridge USDC</h2>
       </div>
@@ -123,5 +124,7 @@ export default function BridgePage() {
         {buttonLabel}
       </button>
     </Card>
+    <RecoveryCard />
+    </>
   );
 }

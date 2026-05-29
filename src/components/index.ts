@@ -8,3 +8,4 @@ export { TransactionProgress } from "./TransactionProgress";
 export { TransactionHistory } from "./TransactionHistory";
 export { PendingTransfers } from "./PendingTransfers";
 export { SuccessModal } from "./SuccessModal";
+export { RecoveryCard } from "./RecoveryCard";
